@@ -16,7 +16,7 @@
 #' @return \code{syllable_sum} - returns a vector of syllable counts per row. 
 #' @rdname syllabication
 #' @details The worker function of all the syllable functions is 
-#' \code{\link[qdap]{syllable_count}}, though it is not intended for direct 
+#' \code{\link[qdaplite]{syllable_count}}, though it is not intended for direct 
 #' use on a transcript.  This function relies on a combined dictionary lookup 
 #' (based on the Nettalk Corpus (Sejnowski & Rosenberg, 1987)) and backup 
 #' algorithm method.
@@ -98,7 +98,7 @@ function(x, ...) {
 #' @export
 syllable_count <- 
 function(text, remove.bracketed = TRUE, algorithm.report = FALSE, 
-    env = qdap::env.syl) {
+    env = qdaplite::env.syl) {
     if (length(text) > 1) stop("text must be length one")
     if (is.na(text)) {
         NA
