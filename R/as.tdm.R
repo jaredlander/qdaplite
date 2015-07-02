@@ -259,7 +259,6 @@
 #' apply_as_df(reuters, diversity)
 #' apply_as_df(reuters, pos_by)
 #' apply_as_df(reuters, flesch_kincaid)
-#' apply_as_df(reuters, trans_venn)
 #' apply_as_df(reuters, gantt_plot)
 #' apply_as_df(reuters, rank_freq_mplot)
 #' apply_as_df(reuters, character_table)
