@@ -389,26 +389,3 @@ sent_detect <- function(text.var, endmarks = c("?", ".", "!", "|"),
     out[out == "DELETEME_QDAP"] <- NA
     out
 }
-
-#' Sentence Splitting
-#' 
-#' \code{sent_detect_nlp} - Detect and split sentences on endmark boundaries 
-#' using \pkg{openNLP} & \pkg{NLP} utilities which matches the onld version of
-#' the \pkg{openNLP} package's now removed \code{sentDetect} function.
-#' 
-#' @return \code{sent_detect} - returns a character vector of sentences split on
-#' endmark.
-#' @rdname sentSplit
-#' @export
-sent_detect_nlp <- function(text.var, ...){
-    
-    sent_token_annotator <- openNLP::Maxent_Sent_Token_Annotator(...)
-    unlist(lapply(text.var, function(x) {
-        if (is.na(x)) return(NA)
-        tv <- NLP::as.String(unbag(x))
-        out <- NLP::annotate(tv, sent_token_annotator)
-        tv[out]
-    }))
-}
-
-
