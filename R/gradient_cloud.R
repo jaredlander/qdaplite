@@ -54,7 +54,6 @@
 #' @importFrom qdapTools lookup
 #' @importFrom plotrix color.legend
 #' @importFrom wordcloud wordcloud
-#' @importFrom gdata drop.levels
 #' @examples
 #' \dontrun{
 #' DATA$state <- space_fill(DATA$state, c("is fun", "too fun", "you liar"))
@@ -92,7 +91,7 @@ gradient_cloud <- function(text.var, bigroup.var, rev.binary = FALSE, X = "red",
     title.location = 3, title.cex = NULL, legend.cex = .8, 
     legend.location = c(.025, .025, .25, .04), char2space = "~~") {
     text.var <- as.character(text.var)
-    bigroup.var <- drop.levels(bigroup.var)
+    bigroup.var <- as.factor(as.character(bigroup.var))
     if (length(unique(bigroup.var)) != 2) {
         stop("bigroup.var must contain exactly 2 levels")
     }
