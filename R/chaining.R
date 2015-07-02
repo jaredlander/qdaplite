@@ -25,7 +25,6 @@
 #' dat <- sentSplit(DATA, "state")
 #' dat %&% trans_cloud(grouping.var=person)
 #' dat %&% termco(person, match.list=list("fun", "computer"))
-#' dat %&% trans_venn(person)
 #' dat %&% polarity(person)
 #' dat %&% formality(person)
 #' dat %&% automated_readability_index(person)
