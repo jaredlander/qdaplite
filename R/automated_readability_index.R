@@ -9,14 +9,14 @@
 #' or more grouping variables.
 #' @param rm.incomplete logical.  If \code{TRUE} removes incomplete sentences 
 #' from the analysis.
-#' @param \ldots Other arguments passed to \code{\link[qdap]{end_inc}}.
+#' @param \ldots Other arguments passed to \code{\link[qdaplite]{end_inc}}.
 #' @return Returns a list of 2 dataframes: (1) Counts and (2) Readability.  
 #' Counts are the raw scores used to calculate readability score and can be
-#' accessed via \code{\link[qdap]{counts}}.  Readability is the dataframe
+#' accessed via \code{\link[qdaplite]{counts}}.  Readability is the dataframe
 #' with the selected readability statistic by grouping variable(s) and can be 
-#' access via \code{\link[qdap]{scores}}.  The \code{\link[qdap]{fry}} function 
+#' access via \code{\link[qdaplite]{scores}}.  The \code{\link[qdaplite]{fry}} function 
 #' returns a graphic representation of the readability as the 
-#' \code{\link[qdap]{scores}} returns the information for graphing but not a
+#' \code{\link[qdaplite]{scores}} returns the information for graphing but not a
 #' readability score.
 #' @rdname Readability
 #' @section Warning: Many of the indices (e.g., Automated Readability Index) 
@@ -654,7 +654,7 @@ function(text.var, grouping.var = NULL, rm.incomplete = FALSE, ...) {
 
 #' Readability Measures
 #' 
-#' \code{scores.automated_readability_index} - View scores from \code{\link[qdap]{automated_readability_index}}.
+#' \code{scores.automated_readability_index} - View scores from \code{\link[qdaplite]{automated_readability_index}}.
 #' 
 #' automated_readability_index Method for scores
 #' @param x The automated_readability_index object.
@@ -695,7 +695,7 @@ print.readability_score <-
 
 #' Readability Measures
 #' 
-#' \code{counts.automated_readability_index} - View counts from \code{\link[qdap]{automated_readability_index}}.
+#' \code{counts.automated_readability_index} - View counts from \code{\link[qdaplite]{automated_readability_index}}.
 #' 
 #' @param x The automated_readability_index object.
 #' @param \ldots ignored
@@ -785,13 +785,13 @@ plot.readability_count <- function(x, alpha = .3, ...){
 #' 
 #' @param x The readability_score object.
 #' @param alpha The alpha level to be used for the points.
-#' @param auto.label  logical.  For plotting \code{\link[qdap]{fry}} only, if 
+#' @param auto.label  logical.  For plotting \code{\link[qdaplite]{fry}} only, if 
 #' \code{TRUE} labels automatically added.  If \code{FALSE} the user clicks 
 #' interactively.
-#' @param grid logical.  For plotting \code{\link[qdap]{fry}} only, if 
+#' @param grid logical.  For plotting \code{\link[qdaplite]{fry}} only, if 
 #' \code{TRUE} a micro grid is displayed similar to Fry's original depiction, 
 #' though this makes visualizing more difficult.
-#' @param div.col For plotting \code{\link[qdap]{fry}} only, the color of the 
+#' @param div.col For plotting \code{\link[qdaplite]{fry}} only, the color of the 
 #' grade level division lines.
 #' @param \ldots ignored
 #' @importFrom ggplot2 ggplot aes geom_smooth facet_wrap guide_colorbar geom_point theme ggplotGrob theme_bw ylab xlab scale_fill_gradient element_blank guides 
@@ -987,7 +987,7 @@ rename <- function(x) {
 
 #' Readability Measures
 #' 
-#' \code{scores.SMOG} - View scores from \code{\link[qdap]{SMOG}}.
+#' \code{scores.SMOG} - View scores from \code{\link[qdaplite]{SMOG}}.
 #' 
 #' SMOG Method for scores
 #' @param x The SMOG object.
@@ -1023,7 +1023,7 @@ print.SMOG <- function(x, digits = 3, ...) {
 
 #' Readability Measures
 #' 
-#' \code{counts.SMOG} - View counts from \code{\link[qdap]{SMOG}}.
+#' \code{counts.SMOG} - View counts from \code{\link[qdaplite]{SMOG}}.
 #' 
 #' SMOG Method for counts.
 #' @param x The SMOG object.
@@ -1080,7 +1080,7 @@ plot_SMOG <- function(x, ...){
 
 #' Readability Measures
 #' 
-#' \code{scores.flesch_kincaid} - View scores from \code{\link[qdap]{flesch_kincaid}}.
+#' \code{scores.flesch_kincaid} - View scores from \code{\link[qdaplite]{flesch_kincaid}}.
 #' 
 #' flesch_kincaid Method for scores
 #' @param x The flesch_kincaid object.
@@ -1116,7 +1116,7 @@ print.flesch_kincaid <- function(x, digits = 3, ...) {
 
 #' Readability Measures
 #' 
-#' \code{counts.flesch_kincaid} - View counts from \code{\link[qdap]{flesch_kincaid}}.
+#' \code{counts.flesch_kincaid} - View counts from \code{\link[qdaplite]{flesch_kincaid}}.
 #' 
 #' flesch_kincaid Method for counts.
 #' @param x The flesch_kincaid object.
@@ -1184,7 +1184,7 @@ plot_flesch_kincaid <- function(x, ...){
 
 #' Readability Measures
 #' 
-#' \code{scores.linsear_write} - View scores from \code{\link[qdap]{linsear_write}}.
+#' \code{scores.linsear_write} - View scores from \code{\link[qdaplite]{linsear_write}}.
 #' 
 #' linsear_write Method for scores
 #' @param x The linsear_write object.
@@ -1238,7 +1238,7 @@ print.linsear_write <- function(x, digits = 3, ...) {
 
 #' Readability Measures
 #' 
-#' \code{counts.linsear_write} - View counts from \code{\link[qdap]{linsear_write}}.
+#' \code{counts.linsear_write} - View counts from \code{\link[qdaplite]{linsear_write}}.
 #' 
 #' linsear_write Method for counts.
 #' @param x The linsear_write object.
@@ -1372,7 +1372,7 @@ plot.linsear_write_scores <- function(x, alpha = c(.4, .08), ...){
 
 #' Readability Measures
 #' 
-#' \code{scores.coleman_liau} - View scores from \code{\link[qdap]{coleman_liau}}.
+#' \code{scores.coleman_liau} - View scores from \code{\link[qdaplite]{coleman_liau}}.
 #' 
 #' coleman_liau Method for scores
 #' @param x The coleman_liau object.
@@ -1408,7 +1408,7 @@ print.coleman_liau <- function(x, digits = 3, ...) {
 
 #' Readability Measures
 #' 
-#' \code{counts.coleman_liau} - View counts from \code{\link[qdap]{coleman_liau}}.
+#' \code{counts.coleman_liau} - View counts from \code{\link[qdaplite]{coleman_liau}}.
 #' 
 #' coleman_liau Method for counts.
 #' @param x The coleman_liau object.
@@ -1545,7 +1545,7 @@ plot_fry <- function(x, auto.label = TRUE, grid = FALSE, div.col = "grey85", ...
 
 #' Readability Measures
 #' 
-#' \code{scores.fry} - View scores from \code{\link[qdap]{fry}}.
+#' \code{scores.fry} - View scores from \code{\link[qdaplite]{fry}}.
 #' 
 #' fry Method for scores
 #' @param x The fry object.
@@ -1613,7 +1613,7 @@ print.fry <- function(x, digits = 3, auto.label,
 
 #' Readability Measures
 #' 
-#' \code{counts.fry} - View counts from \code{\link[qdap]{fry}}.
+#' \code{counts.fry} - View counts from \code{\link[qdaplite]{fry}}.
 #' 
 #' fry Method for counts.
 #' @param x The fry object.
