@@ -16,7 +16,7 @@
 #'   \item{non_character}{- Text that is non-character.}
 #'   \item{missing_ending_punctuation}{- Text with no endmark at the end of the string.}
 #'   \item{empty}{- Text that contains an empty element (i.e., \code{""}).}
-#'   \item{double_punctuation}{- Text that contains two \pkg{qdap} punctuation marks in the same string.}
+#'   \item{double_punctuation}{- Text that contains two \pkg{qdaplite} punctuation marks in the same string.}
 #'   \item{non_space_after_comma}{- Text that contains commas with no space after them.}
 #'   \item{no_alpha}{- Text that contains string elements with no alphabetic characters.}
 #'   \item{non_ascii}{- Text that contains non-ASCII characters.}
@@ -31,7 +31,7 @@
 #' to fix the text.
 #' @keywords check text spelling
 #' @export
-#' @seealso \code{\link[qdap]{check_spelling_interactive}}
+#' @seealso \code{\link[qdaplite]{check_spelling_interactive}}
 #' @examples
 #' \dontrun{
 #' x <- c("i like", "i want. thet them .", "I am ! that|", "", NA, 
