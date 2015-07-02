@@ -153,7 +153,6 @@ trans_context <- function(text.var, grouping.var, inds, n.before = 3,
 #' @export
 #' @method print qdap_context
 #' @importFrom tools file_ext
-#' @importFrom xlsx write.xlsx
 print.qdap_context <- function(x, file = NULL, pretty = TRUE, width = 70, 
     sep.block = TRUE, double_space = TRUE, ...) {
 
@@ -182,7 +181,8 @@ print.qdap_context <- function(x, file = NULL, pretty = TRUE, width = 70,
             write.csv(out, file = file, row.names = FALSE)
         } else {
             if(FE == "xlsx") {
-                write.xlsx(out, file = file, row.names = FALSE)
+                stop('Writing to xlsx is not supported')
+                #write.xlsx(out, file = file, row.names = FALSE)
             } else {
                 if(!pretty) {
                     sink(file = file)
